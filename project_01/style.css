@@ -1,6 +1,7 @@
 * { margin: 0; padding: 0; }
 a { text-decoration: none; }
 header { width: 100%; height: 100%;}
+main { width: 100%; height: 3000px; }
 
 /* 맨 위 고정된 네비게이션 바
    위치설정 */
@@ -62,7 +63,8 @@ header { width: 100%; height: 100%;}
   display: flex;
   height: 80px;
   align-items: center;
-  padding: 10px 14px;
+  padding: 10px 0;
+  width: 1903px;
 }
 .second_logo {
   display: flex;
@@ -167,7 +169,7 @@ header { width: 100%; height: 100%;}
   width: 120px;
   height: 40px;
   margin: 40px 0 0 70px;
-  display: flex
+  display: flex;
   align-items: center;
   align-content: center;
 }
@@ -178,8 +180,203 @@ header { width: 100%; height: 100%;}
 
 /* 무엇을 도와드릴까요 나오는 짧은 섹션 */
 .help {
-  background-color: beige;
-  display: inline-flex
-  align-items: center
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 250px;
+  width: 1903px;
+  padding: 100px 0 0 0;
+}
+.help > h3 {
+  font-size: 34px;
+}
+.help > p {
+  padding-top: 32px;
+  font-size: 20px;
+}
 
+/* 메인화면중에 구역 여섯개로 나뉜 섹션 */
+.section_six_area {
+  width: 1903px;
+}
+.first_area {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-evenly;
+  height: 350px;
+  padding: 15px 50px 0 50px;
+}
+.second_area {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-evenly;
+  padding: 24px 50px 0 50px;
+}
+.box_line {
+  border-left: 1px solid black;
+  width: 0.1px;
+  height: 280px;
+  padding: 0;
+}
+.area_maintext {
+  padding: 15px 0 15px 0;
+  font-size: 24px;
+}
+.area_text {
+  line-height: 28px;
+  font-size: 18px;
+}
+.section_six_area > div:last-of-type {
+  height: 180px;
+  display: grid;
+  place-items: center;
+}
+.area_pinkbox {
+  background-color: #ea6f66;
+  width: 140px;
+  height: 40px;
+
+}
+.area_pinkbox > p {
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  padding: 6px 0 0 8px;
+}
+
+/* 전 세계 기업과 ~ 부분 나오는 구역 */
+aside {
+  background-color: #292f45;
+  height: 600px;
+  width: 1903px;
+  position: ;
+}
+aside > h1 {
+  color: #ffff;
+  display: grid;
+  place-items: center;
+  font-size: 32px;
+  padding: 80px 0 80px 0;
+}
+.aside_img {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+  align-items: center;
+  padding: 30px 0 0 90px;
+}
+
+/* 메인 화면 아래쪽에 박스 3개 */
+.three_div {
+  width: 1903px;
+  padding: 0;
+}
+.div_group {
+  background-color: #ffff;
+  display: inline-block;
+  margin: 0;
+  width: 300px;
+  height: 365px;
+  align-items: flex-start;
+  align-content: center;
+  position: relative;
+  top: -170px;
+  z-index: 2;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.07), 
+                0 2px 4px rgba(0,0,0,0.07), 
+                0 4px 8px rgba(0,0,0,0.07), 
+                0 8px 16px rgba(0,0,0,0.07),
+                0 16px 32px rgba(0,0,0,0.07), 
+                0 32px 64px rgba(0,0,0,0.07);
+}
+.three_div > div:nth-child(1) {
+  margin-left: 350px;
+}
+.three_div > div:nth-child(2) {
+  margin: 0 140px 0 140px;
+}
+.three_div > div:nth-child(3) {
+  margin-right: 100px;
+}
+.div_group > i {
+  color: #ea6f66;
+  display: grid;
+  place-items: center;
+  padding: 30px 0 20px 0;
+}
+.div_group > p {
+  display: grid;
+  place-items: center;
+}
+.div_group > p:first-of-type {
+  font-size: 22px;
+  margin-bottom: 12px;
+}
+.div_group > p:nth-child(3) {
+  font-size: 18px;
+}
+.div_group > p:nth-child(4) {
+  font-size: 24px;
+  margin-top: 60px;
+}
+
+/* 메인 아래쪽에 일러스트랑 같이 들어가는 마지막 섹션 (비즈니스의~) */
+.business {
+  background-color: #eaeff9;
+  top: -365px;
+  display: grid;
+  position: relative;
+  z-index: 1;
+  height: 688px;
+  margin: 0;
+  padding: 0px;
+  width: 1903px;
+}
+.illust {
+  padding: 0;
+  height: 400px;
+}
+svg {
+  margin: 300px 770px 0 770px;
+}
+.business > h1 {
+  display: grid;
+  place-items: center;
+  align-content: flex-start;
+  font-size: 32px;
+}
+#b_box {
+  display: grid;
+  place-items: center;
+  align-content: flex-start;
+  background-color: 
+}
+#b_box > div {
+  background-color: #ea6f66;
+  width: 120px;
+  height: 40px;
+}
+#b_box > div > p {
+  font-size: 18px;
+  display: grid;
+  place-items: center;
+  padding-top: 8px;
+}
+
+/* 푸터 부분 */
+footer {
+  background-color: #292f45;
+  height: 66px;
+  width: 1903px;
+}
+footer > p {
+  color: #ffff;
+  display: flex;
+  justify-content: center;
+  line-height: 30px;
+}
+footer > p > a {
+  color: #ffff;
 }
