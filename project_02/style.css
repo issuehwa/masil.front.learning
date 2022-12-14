@@ -1,0 +1,15 @@
+* { margin: 0; padding: 0; }
+body { width: 1920px; }
+a { text-decoration: none; }
+li { list-style: none; }
+
+/* 네비게이션 부분 */
+.navbar {
+  display: flex;
+  align-items: center;
+}
+.navbar_logo {
+}
+.navbar_second > ul {
+  display: flex;
+}

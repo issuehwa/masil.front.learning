@@ -62,11 +62,13 @@ hr {
   display: inline-flexbox;
   width: 430px;
 }
-.navbar_etc > p,
-a,
-div {
+.navbar_etc > p {
   padding: 0 10px;
 }
+.navbar_etc > a {
+  padding: 0 100px;
+}
+
 .navbar_etc > p,
 a {
   white-space: nowrap;
@@ -498,4 +500,10 @@ footer > p {
 footer > p > a {
   color: #ffff;
   text-decoration: underline;
+}
+
+
+.help p {
+  width: 200px;
+  text-align: center;
 }
