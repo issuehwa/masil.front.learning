@@ -2,17 +2,22 @@
 a { text-decoration: none; }
 header { width: 100%; height: 100%;}
 main { width: 100%; height: 3000px; }
+body { padding-top: 68px; font-family: "Noto Sans KR", sans-serif; }
 
-/* 맨 위 고정된 네비게이션 바
-   위치설정 */
+/* --------------------------------------------header------------------------------------------ */
+
+/* 맨 위 고정된 네비게이션 바 위치설정 */
 .navbar_fixed {
   background-color: #ffff;
   display: flex;
   height: 40px;
-  position: sticky;
+  position: fixed;
+  top: 0; left: 0; right: 0;
   align-items: center;
   padding: 14px 16px;
   margin: 0;
+  z-index: 3;
+  font-family: Arial;
 }
 .navbar_logo {
   padding: 0 30px;
@@ -54,10 +59,38 @@ main { width: 100%; height: 3000px; }
   font-size: 14px;
   text-decoration: underline;
 }
+.fa-brands {
+  color: black;
+}
+.fa-solid {
+  color: black;
+}
+.fa-computer:hover, .fa-computer:focus {
+  color: lightskyblue;
+}
+.fa-mobile-screen-button:hover, .fa-mobile-screen-button:focus {
+  color: lightskyblue;
+}
+#fixed_a_1:hover {
+  color: lightskyblue;
+}
+#fixed_a_2 > div > p {
+  padding: 10px 0 0 15px;
+  color: #ffff;
+}
+.navbar_etc > a >  div {
+  height: 40px;
+  width: 100px;
+  border-radius: 25px;
+  background-color: #116dff;
+  margin: 5px;
+}
+.navbar_etc > a > div:last-of-type:hover {
+  background-color: #70a5fa;
+  transition-duration: 1s;
+}
 
-
-/* 고정되지 않은 두번째 네비게이션 바 
-   위치설정 */
+/* 고정되지 않은 두번째 네비게이션 바 위치설정 */
 .navbar_second {
   background-color: #292f45;
   display: flex;
@@ -65,33 +98,60 @@ main { width: 100%; height: 3000px; }
   align-items: center;
   padding: 10px 0;
   width: 1903px;
+  flex-wrap: nowrap;
 }
 .second_logo {
   display: flex;
   align-items: center;
-  padding-left: 50px;
+  padding: 0 0 0 50px;
   flex-grow: 8;
+  column-width: 150px;
+  -webkit-flex: 1100px;
+  flex: 1100px;
 }
-.second_logo > p {
-  padding: 0 10px;
+.second_logo > a:last-of-type > p {
+  padding: 0 0 0 5px;
   line-height: 25px;
 }
 .second_menu {
   list-style: none;
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
   font-size: 18px;
   flex-grow: 1;
+  -webkit-flex: 300px;
+  flex: 300px;
 }
 .sns_icon {
   display: flex;
-  justify-content: flex-start;  
+  justify-content: center;  
+  -webkit-flex: 5px;
+  flex: 5px;
 }
-.sns_icon > img {
-  padding: 0 4px;
+.sns_icon > a {
+  padding: 0 5px;
 }
 
-/* 헤더 부분의 메인 이미지 위치설정 외 이것저것*/
+/* 두번째 네비바 위치설정 외 잡다한 설정 */
+.second_logo > p {
+  color: #ffff;
+}
+.second_logo > a:last-of-type {
+  color: #ffff;
+  padding: 0;
+  font-size: 18px;
+}
+.fa-circle-user {
+  color: #ea6f66;
+}
+.second_menu > a {
+  color: #ffff;
+}
+.second_menu > a:hover {
+  color: #ea6f66;
+}
+
+/* 헤더 부분의 메인 이미지 위치설정+이것저것 */
 .header_mainimg {
   margin: 0;
   padding: 0;
@@ -111,18 +171,23 @@ main { width: 100%; height: 3000px; }
   z-index: 1;
   padding: 110px;
 }
-#imgtext_2 > div:first-of-type {
+#imgtext_2 > a > div:first-of-type {
   padding: 0;
   margin-top: 30px;
   width: 142px;
   height: 40px;
   background-color: #ea6f66;
 }
+#imgtext_2 > a > div:first-of-type:hover {
+  background-color: #ffff;
+  transition-duration: 2s;
+}
 .text_group {
   display: flex;
   flex-direction: column;
   align-items: center;
   align-content: center;
+  line-height: 68px;
 }
 #imgtext_2 > h1 {
   width: 500px;
@@ -130,16 +195,23 @@ main { width: 100%; height: 3000px; }
   padding: 0;
   color: #ffff;
 }
-#imgtext_2 > h6 {
+#imgtext_2 > span {
   padding-top: 10px;
   width: 542px;
   font-size: 24px;
   color: #ffff;
 }
-#imgtext_2 > div > p {
-  padding: 8px 10px;
-  font-size: 18px;
+#imgtext_2 > a > div {
+  display: grid;
+  place-content: center;
 }
+#imgtext_2 > a > div > p {
+  color:#292f45;
+  font-size: 18px;
+  margin: -10px;
+}
+
+/* --------------------------------------------main------------------------------------------ */
 
 /* 헤더 바로 밑 메인 화면 (미아) */
 .section_first {
@@ -158,24 +230,34 @@ main { width: 100%; height: 3000px; }
 .mia > div > h4 {
   font-size: 34px;
   margin-left: 70px;
+  line-height: 44px;
+  color: #292f45;
 }
 .mia > div > p {
   margin: 40px 0 0 70px;
   line-height: 28px;
   font-size: 18px;
 }
-.mia > div > div {
+#mia_box > div {
   background-color: #ea6f66;
   width: 120px;
   height: 40px;
-  margin: 40px 0 0 70px;
+  margin: 10px 0 0 70px;
   display: flex;
   align-items: center;
   align-content: center;
 }
-.mia > div > div > p {
+#mia_box > div:hover {
+  background-color: #292f45;
+  color: #ffff;
+  transition-duration: 2s;
+}
+#mia_box {
+  color: #292f45
+}
+#mia_box > div > p {
   padding: 10px 16px;
-  font-size: 16px;
+  font-size: 18px;
 }
 
 /* 무엇을 도와드릴까요 나오는 짧은 섹션 */
@@ -189,11 +271,13 @@ main { width: 100%; height: 3000px; }
   padding: 100px 0 0 0;
 }
 .help > h3 {
-  font-size: 34px;
+  font-size: 38px;
+  color: #292f45;
 }
 .help > p {
   padding-top: 32px;
   font-size: 20px;
+  line-height: 26px;
 }
 
 /* 메인화면중에 구역 여섯개로 나뉜 섹션 */
@@ -235,15 +319,22 @@ main { width: 100%; height: 3000px; }
 .area_pinkbox {
   background-color: #ea6f66;
   width: 140px;
-  height: 40px;
-
+  height: 40px;  
+}
+.area_pinkbox:hover {
+  background-color: #292f45;
+  color: #ffff;
+  transition-duration: 2s;
+}
+.section_six_area > div:last-of-type > a {
+  color: #292f45;
 }
 .area_pinkbox > p {
   font-size: 18px;
   display: flex;
   align-items: center;
   align-content: center;
-  padding: 6px 0 0 8px;
+  padding: 6px 0 0 14px;
 }
 
 /* 전 세계 기업과 ~ 부분 나오는 구역 */
@@ -251,7 +342,6 @@ aside {
   background-color: #292f45;
   height: 600px;
   width: 1903px;
-  position: ;
 }
 aside > h1 {
   color: #ffff;
@@ -345,18 +435,23 @@ svg {
   display: grid;
   place-items: center;
   align-content: flex-start;
-  font-size: 32px;
+  font-size: 36px;
+  color: #292f45;
 }
 #b_box {
   display: grid;
   place-items: center;
   align-content: flex-start;
-  background-color: 
 }
 #b_box > div {
   background-color: #ea6f66;
   width: 120px;
   height: 40px;
+}
+#b_box > div:hover {
+  background-color: #292f45;
+  transition-duration: 2s;
+  color: #ffff;
 }
 #b_box > div > p {
   font-size: 18px;
@@ -364,8 +459,12 @@ svg {
   place-items: center;
   padding-top: 8px;
 }
+.business > a:last-of-type {
+  color: #292f45;
+}
 
-/* 푸터 부분 */
+/* --------------------------------------------footer------------------------------------------ */
+
 footer {
   background-color: #292f45;
   height: 66px;
@@ -379,4 +478,5 @@ footer > p {
 }
 footer > p > a {
   color: #ffff;
+  text-decoration: underline;
 }
