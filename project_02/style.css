@@ -1,15 +1,272 @@
 * { margin: 0; padding: 0; }
-body { width: 1920px; }
+body { width: 1920px; background-color: #ededed; }
 a { text-decoration: none; }
 li { list-style: none; }
 
-/* 네비게이션 부분 */
+/* --------------------네비게이션 부분 위치설정------------------ */
 .navbar {
   display: flex;
   align-items: center;
+  flex-direction: column;
+  flex-wrap: nowrap;
 }
-.navbar_logo {
-}
-.navbar_second > ul {
+/* 네비게이션 윗단 */
+#navbar_logo {
+  width: 100%;
   display: flex;
+  align-items: center;
+  height: 83px;
+}
+#navbar_logo > a > img {
+  margin: 0 0 0 30px;
+}
+#logo_text {
+  width: 190px;
+}
+#navbar_telnumber {
+  display: flex;
+  margin-left: 1300px;
+  height: 83px;
+  align-items: center;
+  width: 348px;
+  justify-content: center;
+}
+/* 네비게이션 아랫단 */
+#navbar_second {
+  height: 71px;
+  width: 100%;
+  display: flex;
+}
+#navbar_second > ul {
+  display: flex;
+  width: 800px;
+  justify-content: space-around;
+  align-items: center;
+}
+#second_login {
+  display: flex;
+  align-items: center;
+  margin-left: 710px;
+}
+#second_login > a {
+  margin: 0 5px 0 5px;
+}
+/* 네비게이션 부분 위치설정 외 기타설정 */
+#navbar_logo {
+  background-color: #e3e3e3;
+}
+#navbar_second {
+  background-color: #ededed;
+}
+#logo_text > strong {
+  color: #25352c;
+  font-size: 22px;
+}
+#navbar_telnumber {
+  background-color: #7b9e36;
+}
+#navbar_telnumber > strong {
+  color: #ffff;
+}
+
+/* -----------------------헤더 부분 위치설정------------------------ */
+.header_box {
+  width: 647px;
+  height: 341px;
+  position: absolute;
+  margin: -700px 0 0 950px;
+}
+.header_box > h1 {
+  height: 270px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 50px;
+}
+#header_bottom_box {
+  display: flex;
+  height: 71px;
+  justify-content: flex-end;
+  align-items: center;
+}
+#header_bottom_box > a:first-of-type {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 286px;
+}
+#header_bottom_box > a:last-of-type {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 70px;
+}
+
+/* 헤더 부분 위치설정 외 기타설정 */
+.header_box {
+  background-color: #ffff;
+  box-shadow: 1px 1px 25px #585858;
+}
+.header_box > h1 {
+  font-size: 48px;
+  color: #25352c;
+}
+#header_bottom_box > a:first-of-type {
+  background-color: #25352c;
+}
+#header_bottom_box > a:last-of-type {
+  background-color: #7b9e36;
+}
+
+/* -------------------------메인--------------------------- */
+
+/* 메인 중에 헤더 바로 밑 6개 구역으로 나뉜곳 위치설정 */
+.main_six_img {
+  margin: 80px 0 0 0;
+}
+#first_area {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 0 450px 0 450px;
+}
+#first_area div div a {
+  display: flex;
+  height: 107px;
+  justify-content: center;
+  align-items: center;
+}
+#second_area {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 30px 450px 0 450px;
+}
+#second_area div div a {
+  display: flex;
+  height: 107px;
+  justify-content: center;
+  align-items: center;
+}
+#six_area_button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 150px;
+  /* width: 327px;
+  height: 70px; */
+  margin: 50px 0 50px 0;
+}
+#button_01 {
+  display: flex;
+  height: 70px;
+  width: 257px;
+  justify-content: center;
+  align-items: center;
+}
+#button_02 {
+  display: flex;
+  height: 70px;
+  width: 70px;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 6개 구역 위치설정 외 기타설정 */
+#first_area div {
+  background-color: #ffff;
+}
+#first_area div div a {
+  font-size: 24px;
+  color: #000000;
+}
+#second_area div {
+  background-color: #ffff;
+}
+#second_area div div a {
+  font-size: 24px;
+  color: #000000;
+}
+#button_01 {
+  background-color: #25352c;
+}
+#button_02 {
+  background-color: #7b9e36;
+}
+
+/* 좌우 이미지&텍스트로 구성된 4개 구역 위치설정 */
+.four_area {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.four_area > div:first-of-type {
+  width: 895px;
+  height: 661px;
+  display: grid;
+  place-content: center;
+}
+.four_area > div:last-of-type {
+  width: 892px;
+  height: 520px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#four_area_01 > h4 {
+  margin-top: -10px;
+}
+#four_area_01 > b {
+  margin-top: 10px;
+}
+#four_area_01 > p {
+  margin-top: 80px;
+}
+#four_area_02 > a {
+  width: 157px;
+  height: 51px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 40px 0 40px 0;
+}
+
+/* 좌우 이미지&텍스트로 구성된 4개 구역 위치설정 외 기타설정 */
+.four_area > div:first-of-type {
+  background-color: #ffff;
+}
+.four_area > div:last-of-type {
+  background-color: #ffff;
+}
+.four_area div h4 {
+  font-size: 36px;
+}
+.four_area div b {
+  color: #7b9e36;
+  font-size: 16px;
+}
+.four_area > div > p {
+  font-size: 14px;
+  line-height: 24px;
+}
+#four_area_02 > a {
+  background-color: #7b9e36;
+}
+
+/* 메인 중간에 텍스트만 나오는 작은 구역 위치설정 */
+aside {
+  height: 609px;
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  grid-template-columns: 1fr 9fr 1fr;
+}
+aside div {
+  display: grid;
+  place-items: center;
+}
+aside div p span {
+  display: flex;
+  justify-content: center;
 }
