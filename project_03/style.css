@@ -1,0 +1,38 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Gamja Flower', cursive;
+}
+li {
+  list-style: none;
+}
+section {
+  display: flex;
+  background-color: azure;
+  width: 58em;
+  height: 84em;
+  align-items: center;
+  flex-direction: column;
+}
+section > span {
+  display: flex;
+}
+section > h1 {
+  font-size: 3.5em;
+  margin: 1em 0 1em 0;
+}
+section > h1 > span {
+  font-size: 0.7em;
+}
+#input {
+  width: 27em;
+  height: 2em;
+  font-size: 1.5em;
+}
+#button {
+  width: 5em;
+  margin: 0 1em 0 1em;
+  font-size: 1.7em;
+}
+
