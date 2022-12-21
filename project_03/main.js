@@ -27,12 +27,3 @@ addToDo.addEventListener('click',function() {
   list.setAttribute('value','삭제'); // 버튼 안에 들어가는 밸류값
   toDoList.after(list);  // list 맨 뒤에 붙임
 })  
-
-
-// 이벤트 핸들러 등록
-// ul에 자식 요소로 사용자가 입력한 텍스트가 들어간 li태그 추가
-// 만약 입력한 내용이 없을 시 경고창 출력
-// li태그와 함께 삭제 버튼, 내용 수정 버튼이 있어야 함
-// 삭제 버튼은 li태그 옆에 체크박스를 선택하면 삭제되게끔 함
-// 일괄 삭제 기능 추가(가능하면)
-
