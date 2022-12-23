@@ -25,12 +25,12 @@ section > h1 {
 section > h1 > span {
   font-size: 0.7em;
 }
-#input {
+#inputText {
   width: 27em;
   height: 2em;
   font-size: 1.5em;
 }
-#button {
+#addbutton {
   width: 5em;
   margin: 0 1em 0 1em;
   font-size: 1.7em;
