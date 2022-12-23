@@ -13,6 +13,7 @@ function addToDoList() {   // addToDoList 함수 선언 (알아보기 편하게 
   if (!input.value) alert('내용을 입력해 주세요');  // 만약 input 내용이 비었을 시 나오는 경고창
   else {
     listData = document.getElementById('inputText').value;  // input에 입력한 문자열을 읽어옴
+    
   }
 }
 
