@@ -36,9 +36,9 @@ function modifyList(count) {  // modifyList 함수 선언
   if (!input.value) alert('내용을 입력해 주세요');  // 만약 input 내용이 비었을 시 나오는 경고창  
   else {
     // 목록에서 바꿔치기
-    
+    inputList.splice(count-1, 1, input.value);
     // input.value
-    inputList
+    input.value = "";
 
     // 그리기
     reander();
@@ -48,6 +48,10 @@ function modifyList(count) {  // modifyList 함수 선언
 function reander() {
   // 그려진 목록 초기화
   // list 자녀 모두 지우기
+  while (list.hasChildNodes()) {
+    list.removeChild(list.firstChild);
+  }
+  
 
   // 목록 새로 그리기
   count = 1;
