@@ -4,22 +4,28 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/project_03/css/style.css" />
-    <!-- <link rel="stylesheet" href="./style.css" /> -->
-    <style> @import url('https://fonts.googleapis.com/css2?family=Gamja+Flower&display=swap'); </style>
+    <link rel="stylesheet" href="./css/style.css" />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Gamja+Flower&display=swap");
+    </style>
     <script defer src="./js/data.js"></script>
     <script defer src="./js/main.js"></script>
-    <title>To Do List</title>
+    <title>게시판</title>
   </head>
   <body>
-    <section>
-      <h1><span>📌</span>To Do List</h1>
-      <span>
-        <!-- <input type="text" name="inputText" id="inputText"/> -->
-        <!-- <button id="addButton" onclick="addList()">✔추가</button> -->
-      </span>
-      <ul id="toDoList">
-      </ul>
-    </section>
+    <span class="h1_header">
+      <h1>게시판</h1>
+      <hr />
+    </span>
+    <span class="board_top">
+      <b>번호</b>
+      <b>제목</b>
+      <b>작성자</b>
+      <b>작성일</b>
+    </span>
+    <hr />
+    <span id="board_list">
+
+    </span>
   </body>
 </html>
