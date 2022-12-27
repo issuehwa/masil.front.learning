@@ -9,99 +9,6 @@ const list = document.getElementById("toDoList"); // HTML 요소 중에 id가 to
 
 // 데이터
 let count = 1;
-let inputList = [
-  {
-    title: "참교육",
-    reg: "채용택",
-    content: "참교육하는 애니메이션 입니다.",
-    reg_date: "2022-12-02",
-    upd_date: "",
-  },
-  {
-    title: "뷰티풀 군바리",
-    reg: "설이",
-    content: "군대가는 만화입니다.",
-    reg_date: "2022-12-05",
-    upd_date: "",
-  },
-  {
-    title: "퀘스트지상주의",
-    reg: "박태준 만화회사",
-    content: "퀘스트하는 만화입니다.",
-    reg_date: "2022-12-24",
-    upd_date: "2022-12-25",
-  },
-  {
-    title: "장씨세가 호위무사",
-    reg: "김인호",
-    content: "호위무사 애니메이션이다.",
-    reg_date: "2022-11-23",
-    upd_date: "",
-  },
-  {
-    title: "윈드브레이커",
-    reg: "조용석",
-    content: "바람막이인가요?",
-    reg_date: "2022-01-26",
-    upd_date: "",
-  },
-  {
-    title: "팔이피플",
-    reg: "매미",
-    content: "파티 좋아하세요?",
-    reg_date: "2021-04-26",
-    upd_date: "2022-12-26",
-  },
-  {
-    title: "앵무살수",
-    reg: "김성진",
-    content: "더 이상의 자세한 설명은 안한다.",
-    reg_date: "2022-06-05",
-    upd_date: "",
-  },
-  {
-    title: "소녀의 세계",
-    reg: "모랑지",
-    content: "소녀랑 소년은 받침이 다를뿐",
-    reg_date: "2022-05-05",
-    upd_date: "",
-  },
-  {
-    title: "퍼니게임",
-    reg: "배진수",
-    content: "돈 벌어보는 애니메이션",
-    reg_date: "2022-04-12",
-    upd_date: "",
-  },
-  {
-    title: "호랑신랑뎐",
-    reg: "고추참지",
-    content: "호랑이가 사람인가요?",
-    reg_date: "2022-09-11",
-    upd_date: "",
-  },
-  {
-    title: "강남의 기사",
-    reg: "김재환",
-    content: "강남 소나타는 요즘 포르쉐 파라메라",
-    reg_date: "2022-08-05",
-    upd_date: "2022-09-09",
-  },
-  {
-    title: "잔불의 기사",
-    reg: "환댕",
-    content: "잔불도 다시보자",
-    reg_date: "2020-09-11",
-    upd_date: "",
-  },
-  {
-    title: "히어로메이커",
-    reg: "빤쓰",
-    content: "히어로라면 마블인가 디씨인가?",
-    reg_date: "2022-07-22",
-    upd_date: "",
-  },
-];
 
 function addList() {
   if (!input.value) alert("내용을 입력해 주세요");
@@ -167,50 +74,73 @@ function reander() {
   let arrRegDate = [];
   let arrUpdDate = [];
 
-  for (let title of inputList) {
-    arrTitle.push(title.title);
-  }
-  for (let reg of inputList) {
-    arrReg.push(reg.reg);
-  }
-  for (let content of inputList) {
-    arrContent.push(content.content);
-  }
-  for (let regdate of inputList) {
-    arrRegDate.push(regdate.reg_date);
-  }
-  for (let upddate of inputList) {
-    arrUpdDate.push(upddate.upd_date);
+  for (let item of inputList) {
+    arrTitle.push(item.title);
+    arrReg.push(item.reg);    
+    arrContent.push(item.content);
+    arrRegDate.push(item.reg_date);
+    arrUpdDate.push(item.upd_date);
   }
 
+  // for (let key in inputList) {
+  //   let item = inputList[key]
+  //   arrTitle.push(item.title);
+  // }
+
+  // for (let reg of inputList) {
+  //   arrReg.push(reg.reg);
+  // }
+  // for (let content of inputList) {
+  //   arrContent.push(content.content);
+  // }
+  // for (let regdate of inputList) {
+  //   arrRegDate.push(regdate.reg_date);
+  // }
+  // for (let upddate of inputList) {
+  //   arrUpdDate.push(upddate.upd_date);
+  // }
+
   for (let i = 0; i < inputList.length; ++i) {
-    // li태그
-    let temp = document.createElement("li");
-    temp.setAttribute("id", "li_" + count);
-    list.appendChild(temp);
-    // h4태그
-    let tempHeader = document.createElement("h4");
-    temp.appendChild(tempHeader);
-    // a태그 (h4태그 안에 들어가는 제목)
-    let headerLink = document.createElement("a");
-    tempHeader.appendChild(headerLink);
-    headerLink.innerText = arrTitle[i];
-    // p태그 (작성자)
-    let tempPtag = document.createElement("p");
-    temp.appendChild(tempPtag);
-    tempPtag.innerText = arrReg[i];
-    // p태그2 (내용)
-    let tempPtag2 = document.createElement("p");
-    temp.appendChild(tempPtag2);
-    tempPtag2.innerText = arrContent[i];
-    // span태그 (작성일)
-    let tempSpan = document.createElement("span");
-    temp.appendChild(tempSpan);
-    tempSpan.innerText = arrRegDate[i];
-    // span태그2 (수정일)
-    let tempSpan2 = document.createElement("span");
-    temp.appendChild(tempSpan2);
-    tempSpan2.innerText = arrUpdDate[i];
+    
+    let item = inputList[i];
+    
+    // // li태그
+    // let temp = document.createElement("li");
+    // temp.setAttribute("id", "li_" + count);
+    // list.appendChild(temp);
+    // // h4태그
+    // let tempHeader = document.createElement("h4");
+    // temp.appendChild(tempHeader);
+    // // a태그 (h4태그 안에 들어가는 제목)
+    // let headerLink = document.createElement("a");
+    // tempHeader.appendChild(headerLink);
+    // // headerLink.innerText = arrTitle[i];
+    // headerLink.innerText = item.title;
+    // // p태그 (작성자)
+    // let tempPtag = document.createElement("p");
+    // temp.appendChild(tempPtag);
+    // tempPtag.innerText = item.reg;
+    // // p태그2 (내용)
+    // let tempPtag2 = document.createElement("p");
+    // temp.appendChild(tempPtag2);
+    // tempPtag2.innerText = item.content;
+    // // span태그 (작성일)
+    // let tempSpan = document.createElement("span");
+    // temp.appendChild(tempSpan);
+    // tempSpan.innerText = item.reg_date;
+    // // span태그2 (수정일)
+    // let tempSpan2 = document.createElement("span");
+    // temp.appendChild(tempSpan2);
+    // tempSpan2.innerText = item.upd_date;
+
+
+    let temp2 = `<li id="li_${count}">`
+    temp2    += `  <h4><a>${item.title}</a></h4>`
+    temp2    += `  <p>${item.reg}</p>`
+    temp2    += `</li>`
+
+    list.innerHTML += temp2;
+
     count++;
   }
 }
