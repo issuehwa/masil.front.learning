@@ -1,5 +1,6 @@
 let inputList = [
   {
+    id: 54,
     title: "참교육",
     reg: "채용택",
     content: "참교육하는 애니메이션 입니다.",
@@ -7,6 +8,7 @@ let inputList = [
     upd_date: "",
   },
   {
+    id: 33,
     title: "뷰티풀 군바리",
     reg: "설이",
     content: "군대가는 만화입니다.",
@@ -14,6 +16,7 @@ let inputList = [
     upd_date: "",
   },
   {
+    id: 12,
     title: "퀘스트지상주의",
     reg: "박태준 만화회사",
     content: "퀘스트하는 만화입니다.",
@@ -21,6 +24,7 @@ let inputList = [
     upd_date: "2022-12-25",
   },
   {
+    id: 13332,
     title: "장씨세가 호위무사",
     reg: "김인호",
     content: "호위무사 애니메이션이다.",
@@ -28,6 +32,7 @@ let inputList = [
     upd_date: "",
   },
   {
+    id: 11232,
     title: "윈드브레이커",
     reg: "조용석",
     content: "바람막이인가요?",
@@ -35,6 +40,7 @@ let inputList = [
     upd_date: "",
   },
   {
+    id: 2332,
     title: "팔이피플",
     reg: "매미",
     content: "파티 좋아하세요?",
@@ -42,6 +48,7 @@ let inputList = [
     upd_date: "2022-12-26",
   },
   {
+    id: 77,
     title: "앵무살수",
     reg: "김성진",
     content: "더 이상의 자세한 설명은 안한다.",
@@ -49,6 +56,7 @@ let inputList = [
     upd_date: "",
   },
   {
+    id: 4312,
     title: "소녀의 세계",
     reg: "모랑지",
     content: "소녀랑 소년은 받침이 다를뿐",
@@ -56,6 +64,7 @@ let inputList = [
     upd_date: "",
   },
   {
+    id: 1234,
     title: "퍼니게임",
     reg: "배진수",
     content: "돈 벌어보는 애니메이션",
@@ -63,6 +72,7 @@ let inputList = [
     upd_date: "",
   },
   {
+    id: 8888,
     title: "호랑신랑뎐",
     reg: "고추참지",
     content: "호랑이가 사람인가요?",
@@ -70,6 +80,7 @@ let inputList = [
     upd_date: "",
   },
   {
+    id: 9999,
     title: "강남의 기사",
     reg: "김재환",
     content: "강남 소나타는 요즘 포르쉐 파라메라",
@@ -77,6 +88,7 @@ let inputList = [
     upd_date: "2022-09-09",
   },
   {
+    id: 323234,
     title: "잔불의 기사",
     reg: "환댕",
     content: "잔불도 다시보자",
@@ -84,6 +96,7 @@ let inputList = [
     upd_date: "",
   },
   {
+    id: 232,
     title: "히어로메이커",
     reg: "빤쓰",
     content: "히어로라면 마블인가 디씨인가?",
