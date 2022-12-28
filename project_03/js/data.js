@@ -71,7 +71,7 @@ let inputList = [
     reg_date: "2022-04-12",
     upd_date: "",
   },
-  {
+  { 
     id: 8888,
     title: "호랑신랑뎐",
     reg: "고추참지",
