@@ -3,8 +3,6 @@ window.onload = () => {
   reander();
 };
 
-// const button = document.getElementById("addButton"); // HTML 요소 중에 id가 addButton인 요소를 선택해서 변수 button 안에 대입
-// const input = document.getElementById("inputText"); // HTML 요소 중에 id가 inputText인 요소를 선택해서 변수 input 안에 대입
 const list = document.getElementById("board_list"); // HTML 요소 중에 id가 toDoList인 요소를 선택해서 변수 list 안에 대입
 
 // 데이터

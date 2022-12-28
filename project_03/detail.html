@@ -4,17 +4,35 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./css/style.css"  />
     <style> @import url('https://fonts.googleapis.com/css2?family=Gamja+Flower&display=swap'); </style>
     <script defer src="./data.js"></script>
     <script defer src="./main.js"></script>
+    <title>게시판(상세)</title>
   </head>
-  <body>
-    <ul>
-      <li>
-        <p>참교육</p>
-        <p>채용택</p>
-      </li>
-    </ul>
+  <body id="detail_body">
+    <span class="h1_header">
+      <h1>게시판</h1>
+      <hr />
+    </span>
+    <span id="button_group">
+      <button type="button">삭제</button>
+      <button type="button">수정</button>
+      <button type="button">목록</button>
+    </span>
+    <span id="boardDetail_1">
+      <b>제목</b>
+      <b>작성자</b>
+    </span>
+    <hr />
+    <span id="boardDetail_2">
+      <b>작성일</b>
+      <b>수정일</b>
+    </span>
+    <hr />
+    <span id="boardDetail_3">
+      <b>내용</b>
+    </span>
+    <hr />
   </body>
 </html>

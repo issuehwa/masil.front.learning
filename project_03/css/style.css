@@ -13,9 +13,11 @@ li {
 }
 
 .board_top {
-  display: flex;
-  margin: 10em 10em 1em 10em;
-  justify-content: space-around;
+  display: grid;
+  justify-items: start;
+  margin: 10em 4em 1em 10em;
+  grid-template-columns: 1fr 2fr 1fr 1fr;
+  grid-template-rows: 1fr;
   font-size: 1.2em;
 }
 
@@ -27,7 +29,63 @@ li {
 #board_list ul {
   display: grid;
   justify-items: start;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 2fr 1fr 1fr;
   grid-template-rows: 1fr;
-  margin: 1em 5em 1em 23em;
+  margin: 1em 5em 1em 12em;
 } 
+
+#board_list > hr {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#boardtop_hr {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#button_group {
+  display: flex;
+  justify-content: flex-end;
+  margin: 10em 10em 0 0;
+}
+
+#button_group button {
+  margin: 0 1em 0 1em;
+  width: 7em;
+  height: 3em;
+}
+
+#boardDetail_1 {
+  display: grid;
+  justify-items: start;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  margin: 2em 5em 1em 15em;
+}
+
+#boardDetail_2 {
+  margin: 1em 0 1em 0;
+  display: grid;
+  justify-items: start;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  margin: 1em 5em 1em 15em;
+}
+
+#boardDetail_3 {
+  margin: 1em 0 1em 0;
+  display: grid;
+  justify-items: start;
+  grid-template-columns: 1fr;
+  grid-template-rows: 15em;
+  margin: 1em 5em 1em 15em;
+}
+
+#detail_body > hr {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
