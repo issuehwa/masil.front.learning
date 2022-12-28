@@ -61,7 +61,7 @@ li {
 #boardDetail_1 {
   display: grid;
   justify-items: start;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: 1fr;
   margin: 2em 5em 1em 15em;
 }
@@ -70,7 +70,7 @@ li {
   margin: 1em 0 1em 0;
   display: grid;
   justify-items: start;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: 1fr;
   margin: 1em 5em 1em 15em;
 }
@@ -79,7 +79,7 @@ li {
   margin: 1em 0 1em 0;
   display: grid;
   justify-items: start;
-  grid-template-columns: 1fr;
+  grid-template-columns: 1fr 3fr;
   grid-template-rows: 15em;
   margin: 1em 5em 1em 15em;
 }

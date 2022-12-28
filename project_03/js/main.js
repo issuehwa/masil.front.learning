@@ -8,6 +8,7 @@ const list = document.getElementById("board_list"); // HTML 요소 중에 id가 
 // 데이터
 let count = 1;
 
+
 function reander() {
   // 그려진 목록 초기화
   // list 자녀 모두 지우기
@@ -25,7 +26,7 @@ function reander() {
 
   let reverseList = inputList.reverse();
 
-  for (let i =0; i < inputList.length; i++) {
+  for (let i =1; i < inputList.length+1; i++) {
     inumber.push(i);
   }
 
