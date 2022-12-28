@@ -46,7 +46,7 @@ function reander() {
 
     let temp = `<ul id="ul_${count}">`
     temp    += `  <li>${inumber[i]}</li>`
-    temp   += `  <li><a href="./detail.html">${item.title}</a></li>`
+    temp   += `  <li><a href="./detail.html?id=${item.id}">${item.title}</a></li>`
     temp   += `  <li>${item.reg}</li>`
     temp   += `  <li>${item.reg_date}</li>`
     temp    += `</ul>`
@@ -57,5 +57,4 @@ function reander() {
     count++;
   }
 }
-
 
