@@ -8,7 +8,6 @@ const list = document.getElementById("board_list"); // HTML 요소 중에 id가 
 // 데이터
 let count = 1;
 
-
 function reander() {
   // 그려진 목록 초기화
   // list 자녀 모두 지우기
@@ -17,15 +16,22 @@ function reander() {
   // }
 
   count = 1;
-  let arrId = [];
   let arrTitle = [];
   let arrReg = [];
   let arrContent = [];
   let arrRegDate = [];
   let arrUpdDate = [];
+  let inumber = [];
+
+  let reverseList = inputList.reverse();
+
+  for (let i =0; i < inputList.length; i++) {
+    inumber.push(i);
+  }
+
+  let reverseInumber = inumber.reverse();
 
   for (let item of inputList) {
-    arrId.push(item.id);
     arrTitle.push(item.title);
     arrReg.push(item.reg);    
     arrContent.push(item.content);
@@ -33,12 +39,13 @@ function reander() {
     arrUpdDate.push(item.upd_date);
   }
 
+
   for (let i = 0; i < inputList.length; ++i) {
     
     let item = inputList[i];
 
     let temp = `<ul id="ul_${count}">`
-    temp    += `  <li>${item.id}</li>`
+    temp    += `  <li>${inumber[i]}</li>`
     temp   += `  <li><a href="./detail.html">${item.title}</a></li>`
     temp   += `  <li>${item.reg}</li>`
     temp   += `  <li>${item.reg_date}</li>`
