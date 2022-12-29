@@ -8,26 +8,43 @@ const list = document.getElementById("board_list"); // HTML 요소 중에 id가 
 // 데이터
 let count = 1;
 
+function forReander(number) {
+  let item = inputList[number];
+  let order = number + 1;
+
+  let temp = `<ul id="ul_${count}">`
+  temp    += `  <li>${order}</li>`
+  temp   += `  <li><a href="./detail.html?id=${item.id}">${item.title}</a></li>`
+  temp   += `  <li>${item.reg}</li>`
+  temp   += `  <li>${item.reg_date}</li>`
+  temp    += `</ul>`
+  temp    += `<hr />`
+
+  list.innerHTML += temp;
+
+  count++;
+}
+
 function reander() {
   
   // for 문
 
-  for (let i = inputList.length-1; i >= 0; i--) {
+  // for (let i = inputList.length-1; i >= 0; i--) {
     
-    let item = inputList[i];
+  //   let item = inputList[i];
 
-    let temp = `<ul id="ul_${count}">`
-    temp    += `  <li>${i+1}</li>`
-    temp   += `  <li><a href="./detail.html?id=${item.id}">${item.title}</a></li>`
-    temp   += `  <li>${item.reg}</li>`
-    temp   += `  <li>${item.reg_date}</li>`
-    temp    += `</ul>`
-    temp    += `<hr />`
+  //   let temp = `<ul id="ul_${count}">`
+  //   temp    += `  <li>${i+1}</li>`
+  //   temp   += `  <li><a href="./detail.html?id=${item.id}">${item.title}</a></li>`
+  //   temp   += `  <li>${item.reg}</li>`
+  //   temp   += `  <li>${item.reg_date}</li>`
+  //   temp    += `</ul>`
+  //   temp    += `<hr />`
 
-    list.innerHTML += temp;
+  //   list.innerHTML += temp;
 
-    count++;
-  }
+  //   count++;
+  // }
 
   // for in 문
 
@@ -88,24 +105,14 @@ function reander() {
 
   // while 문
 
-  // let i=0;
+  let i=0;
   
-  // while ( inputList.length >= i ) {
+  while ( inputList.length >= i ) {
     
-  //   let item = inputList[i];
-      
-  //   let temp = `<ul id="ul_${i}">`
-  //   temp    += `  <li>${i}</li>`
-  //   temp   += `  <li><a href="./detail.html?id=${item.id}">${item.title}</a></li>`
-  //   temp   += `  <li>${item.reg}</li>`
-  //   temp   += `  <li>${item.reg_date}</li>`
-  //   temp    += `</ul>`
-  //   temp    += `<hr />`
+    forReander(i);
 
-  //   list.innerHTML += temp;
-
-  //   i++;
-  // }
+    i++;
+  }
  
   // do while 문
 
