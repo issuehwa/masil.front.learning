@@ -8,7 +8,6 @@ const list = document.getElementById("board_list"); // HTML 요소 중에 id가 
 // 데이터
 let count = 1;
 
-
 function reander() {
   
   for (let i = inputList.length-1; i >= 0; i--) {
@@ -27,5 +26,15 @@ function reander() {
 
     count++;
   }
+
+  // for in 문
+
+  // for of 문
+
+  // forEach 문
+
+  // while 문
+ 
+  // do while 문
 }
 
