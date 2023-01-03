@@ -9,9 +9,7 @@ a {
 li {
   list-style: none;
 }
-body {
-  width: 1280px;
-}
+
 button {
   border: none;
   background-color: transparent;
@@ -27,7 +25,7 @@ header {
   justify-content: space-between;
 }
 #header_logo {
-  margin: 10px 10px;
+  margin: 10px 20px;
 }
 
 #header_line {
@@ -44,21 +42,22 @@ header div {
 
 /* 왼쪽 사이드 네비게이션 */
 nav {
-  height: 667px;
+  height: 90vh;
   width: 240px;
   background-color: #f6f6f6;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  flex: 1;
 }
 nav ol li {
-  height: 40px;
+  height: 50px;
   color: #666666;
-  font-size: 17px;
+  font-size: 19px;
   display: flex;
   align-items: center;
   padding: 5px 20px;
   font-weight: 700;
+  flex: 4;
 }
 nav ol li:hover {
   background-color: #00c4e1;
@@ -67,7 +66,58 @@ nav ol li:hover {
   color: #ffffff;
 }
 nav button {
+  display: flex;
   margin-bottom: 30px;
+  justify-content: space-evenly;
+  align-items: flex-end;
+  flex: 1;
 }
 
 /* 메인화면 */
+section {
+  display: flex;
+}
+#main {
+  display: flex;
+  flex: 6;
+  flex-direction: column;
+}
+#main b {
+  height: 50px;
+  font-size: 24px;
+  margin: 23px 15px 0 45px;
+  color: #00c4e1;
+}
+
+#main hr:first-of-type {
+  border-color: #00c4e1;
+}
+#main hr {
+  width: 95%;
+  margin: auto;
+}
+
+#main ol {
+  display: flex;
+  height: 64px;
+  align-items: center;
+}
+
+#main ol li:first-of-type {
+  font-size: 20px;
+  font-weight: bold;
+  margin-left: 50px;
+}
+
+#main ol div {
+  border-left: 1px solid black;
+  width: 0.1px;
+  height: 20px;
+  padding: 0;
+  margin: 0 10px 0 10px;
+}
+
+#main ol li:last-of-type {
+  font-size: 18px;
+  font-weight: bold;
+}
