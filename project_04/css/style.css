@@ -77,47 +77,57 @@ nav button {
 section {
   display: flex;
 }
-#main {
-  display: flex;
+section div {
   flex: 6;
-  flex-direction: column;
 }
 #main b {
-  height: 50px;
   font-size: 24px;
-  margin: 23px 15px 0 45px;
   color: #00c4e1;
 }
-
-#main hr:first-of-type {
-  border-color: #00c4e1;
-}
-#main hr {
-  width: 95%;
-  margin: auto;
-}
-
 #main ol {
-  display: flex;
-  height: 64px;
+  display: grid;
+  grid-template-columns: 5% 5% 90%;
+  grid-template-rows: 1fr 1fr;
   align-items: center;
+  height: 40px;
 }
-
 #main ol li:first-of-type {
-  font-size: 20px;
+  margin: 10px 0 10px 30px;
   font-weight: bold;
-  margin-left: 50px;
+  font-size: 20px;
 }
-
-#main ol div {
+#main ol li:last-of-type {
+  margin-left: -50px;
+}
+#main ol div:first-of-type {
   border-left: 1px solid black;
   width: 0.1px;
   height: 20px;
-  padding: 0;
-  margin: 0 10px 0 10px;
+}
+#main ol div:last-of-type {
+  border-bottom: 1px solid black;
+  width: 160vh;
+  height: 0.1px;
 }
 
-#main ol li:last-of-type {
+
+/* 페이징 영역 */
+#pagination {
+  margin-top: 50px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+#page {
+  display: flex;
+}
+#page li {
   font-size: 18px;
   font-weight: bold;
+}
+#page a {
+  margin: 0 30px 0 30px;
+}
+#scaleX {
+  transform: scaleX(-1);
 }
