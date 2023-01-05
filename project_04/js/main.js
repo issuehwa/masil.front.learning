@@ -33,10 +33,10 @@ function renderMainList() {
       let list = dataInfo.list[i];
 
       let temp = `<b>${ctList.step}</b>`;
-      temp += `<hr id="first_hr" />`;
+      temp += `<hr />`;
       if (norepeat < 1) {
         for (count = 0; count < list.detailList.length; count++) {
-          temp += `<ol><li>${list.detailList[count].step}</li><div></div><li>${list.detailList[count].title}</li><div></div></ol>`;
+          temp += `<ol><li>${list.detailList[count].step}</li><div></div><li>${list.detailList[count].title}</li><hr /></ol>`;
         }
       }
       main.innerHTML += temp;
@@ -56,7 +56,7 @@ const rowsCount = rows.length; //rows에 저장된 배열 갯수를 저장
 const pageCount = Math.ceil(rowsCount/rowsPerPage); // 배열 갯수를 데이터의 갯수로 나눈 수를 올림함
 const numbers = document.querySelector('#page');  // 페이징 영역을 변수로 잡음
 
-for (let i = 1; i <= 20; i++) {  // 페이지 번호 생성(10까지 생성하는 반복문)
+for (let i = 1; i <=pageCount ; i++) {  // 페이지 번호 생성( 생성하는 반복문)
   numbers.innerHTML += `<li><a href="">${i}</a></li>`;
 }
 const numberBtn = numbers.querySelectorAll('a'); // numbers 영역 안에 있는 a태그 전부를 변수로 저장
@@ -110,7 +110,7 @@ displayPage(0);
 function displayPage(num) {
   // 페이지 번호 감추기
   for(nb of numberBtn) {
-    // nb.style.display = 'none';
+    nb.style.display = 'none';
   }
   let totalPageCount = Math.ceil(pageCount/maxPageNum); // 페이지그룹을 몇개 만들어야하는건지 변수에 저장
   let pageArr = [...numberBtn]; // numberBtn을 배열로 바꿈
